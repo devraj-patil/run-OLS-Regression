@@ -1,0 +1,12 @@
+import pandas as pd - panda library for importing csv files
+import numpy as np - numpy for numbers function and array
+import matplotlib.pyplot as plt - matplotlib for regression
+from sklearn.linear_model import LinearRegression - sklearn for graphical representation of linear regression
+mydataset = pd.read_csv('realestate.csv') - name your data set
+X = mydataset.iloc[:,2:6].values - variables from data set (independent)
+Y = mydataset.iloc[:,6:7].values- variables from data set (dependent)
+lr = LinearRegression() -(running regression)
+lr.fit(X,Y)- (regression)
+Y_pred = lr.predi -(plot graph)
+plt.plot(X, Y_pred, color= 'green') - Graph Line
+plt.show() - show graph
